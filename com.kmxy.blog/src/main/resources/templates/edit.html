@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>博客编辑</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"
+          href="/css/style.css"/>
+    <link rel="stylesheet" th:href="@{/editormd/css/editormd.css}"
+          href="/editormd/css/editormd.css"/>
+    <link rel="shortcut icon" href="https://hmr-myblog.oss-cn-beijing.aliyuncs.com/public/header.jpg" type="image/x-icon"/>
+    <link rel="icon" type="image/x-icon" href="#">
+    <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/editormd/editormd.min.css"/>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/editormd/editor.css">
+    <link href="https://lib.baomitu.com/font-awesome/5.8.0/css/fontawesome.min.css" rel="stylesheet">
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/editormd/editormd.js"></script>
+    <script src="https://lib.baomitu.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+</head>
+<body>
+<div class="header">
+            <div class="am-topbar" style="margin-bottom: 0">
+                <h1 class="am-topbar-brand">
+                    <a href="/" class="blogTitleName"><img src="https://hmr-myblog.oss-cn-beijing.aliyuncs.com/public/header.jpg" class="imgStyle">程序猿何先森</a>
+                </h1>
+
+                <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse" style="text-align: center">
+
+                    <div class="editor-title"><i class="editor-welcome">欢迎来到</i><i class="editor-title-name">不落皇族</i><i class="editor-title-words">简陋的创作中心</i></div>
+
+                    <div class="am-topbar-right" th:if="${#httpServletRequest.remoteUser}">
+                        <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+                            <span class="personalSpace am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle><span sec:authentication="name"></span> <span class="am-icon-caret-down"></span></span>
+                            <ul class="am-dropdown-content">
+                                <li><a href="/user" sec:authorize="hasRole('ROLE_USER')">个人主页</a></li>
+                                <li><a href="/superadmin" sec:authorize="hasRole('ROLE_SUPERADMIN')">网站后台管理</a></li>
+                                <li><a href="/user" class="news">消息<span class="newsNum am-badge am-badge-danger"></span></a></li>
+                                <hr style="margin: 0">
+                                <li><a th:href="@{/logout}">退出登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-topbar-right" th:unless="${#httpServletRequest.remoteUser}">
+                        <a href="/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" style="color: white">注册</a>
+                    </div>
+                    <div class="am-topbar-right" th:unless="${#httpServletRequest.remoteUser}">
+                        <a href="/login" class="loginBtn am-btn am-btn-primary am-topbar-btn am-btn-sm" style="color: white">登录</a>
+                    </div>
+                    <div class="am-topbar-right writing am-hide-md-down">
+                        <a  href="/edit" target="_blank" style="text-decoration: none">
+                            <img class="am-circle" src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/writing.png">
+                            <span class="write-word">写博客</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<div style="text-align:center">
+<input type="text" name="title" style="width: 200px" id="title" class="am-animation-fade" placeholder="请输入博客标题"/>
+<input type="text" name="articleId" style="width: 200px" id="articleId" class="am-animation-slide-left"placeholder="请输入文章ID"/>
+<input type="text" name="author" style="width: 200px" id="author" class="am-animation-slide-left"placeholder="请输入博客发布主"/>
+<input type="text" name="originalAuthor" style="width: 200px" id="originalAuthor"class="am-animation-slide-left"placeholder="请输入博客作者"/>
+<input type="text" name="articleTitle" style="width: 200px" id="articleTitle"class="am-animation-slide-left"placeholder="请输入博客标题"/>
+<input type="text" name="articleTags" style="width: 200px" id="articleTags"class="am-animation-slide-left"placeholder="请输入博客标题标签"/>
+<input type="text" name="articleCategories" style="width: 200px" id="articleCategories"class="am-animation-slide-left"placeholder="请输入博客归类"/>
+
+<input type="text" name="publishDate" style="width: 200px" id="publishDate"class="am-animation-slide-left"placeholder="请输入博客发布时间"/>
+<input type="text" name="updateDate" style="width: 200px" id="updateDate"class="am-animation-slide-right"placeholder="请输入博客更新时间"/>
+
+<input type="text" name="articleUrl" style="width: 200px" id="articleUrl"class="am-animation-slide-right"placeholder="请输入文章来源"/>
+<input type="text" name="articleTabloid" style="width: 200px" id="articleTabloid"class="am-animation-slide-right"placeholder="请输入博客简介"/>
+<input type="text" name="lastArticleId" style="width: 200px" id="lastArticleId"class="am-animation-slide-right"placeholder="上一篇博客ID"/>
+<input type="text" name="nextArticleId" style="width: 200px" id="nextArticleId"class="am-animation-slide-right"placeholder="下一篇博客ID"/>
+<input type="submit" title="发布"  class="am-animation-shake"id="submitBtn" />
+</div>
+<div class="editormd" id="test-editormd">
+    <textarea class="editormd-markdown-textarea" name="test-editormd-markdown-doc" id="content"></textarea>
+    <!-- 第二个隐藏文本域，用来构造生成的HTML代码，方便表单POST提交，这里的name可以任意取，后台接受时以这个name键为准 -->
+    <textarea class="editormd-html-textarea" name="text" id="htmlContent"></textarea>
+</div>
+<script th:src="@{/js/jquery.min.js}" src="/js/jquery.min.js"></script>
+<script th:src="@{/editormd/js/editormd.js}" src="/editormd/js/editormd.js"></script>
+<script type="text/javascript">
+    $(function() {
+        editormd("test-editormd", {
+            width   : "90%",
+            height  : 400,
+            syncScrolling : "single",
+            //你的lib目录的路径，我这边用JSP做测试的
+            tocm : true, // Using [TOCM]
+            tex : true, // 开启科学公式TeX语言支持，默认关闭
+            flowChart : true, // 开启流程图支持，默认关闭
+            path    : "/editormd/lib/",
+            //这个配置在simple.html中并没有，但是为了能够提交表单，使用这个配置可以让构造出来的HTML代码直接在第二个隐藏的textarea域中，方便post提交表单。
+            saveHTMLToTextarea : true,
+            imageUpload : true,
+            imageFormats : [ "jpg", "jpeg", "gif", "png", "bmp", "webp" ],
+            imageUploadURL : "/uploadimg",
+            onload: function () {
+                //console.log('onload', this);
+                //this.fullscreen();
+                //this.unwatch();
+                //this.watch().fullscreen();
+                this.width("100%");
+                this.height(600);
+                //this.resize("100%", 640);
+            }
+
+
+        });
+        $("#submitBtn").click(
+            function () {
+                alert("点击按钮了");
+                submitblog();
+            }
+        )
+        function submitblog() {
+            var  title = $("#title").val();
+            var content = $("#content").val();
+            var htmlContent = $("#htmlContent").val();
+            var articleId= $("#articleId").val();
+            var author = $("#author").val();
+            var originalAuthor = $("#originalAuthor").val();
+            var articleTitle = $("#articleTitle").val();
+            var articleTags = $("#articleTags").val();
+            var articleCategories = $("#articleCategories").val();
+            var publishDate = $("#publishDate").val();
+            var updateDate = $("#updateDate").val();
+            var articleUrl = $("#articleUrl").val();
+            var articleTabloid = $("#articleTabloid").val();
+        /*     var likes = $("#likes").val(); */
+            var lastArticleId = $("#lastArticleId").val();
+            var nextArticleId = $("#nextArticleId").val();
+            
+            $.ajax({
+                url: "submit",
+                data: {title: title, content:content,htmlContent:htmlContent,articleId:articleId,author:author,originalAuthor:originalAuthor,articleTitle:articleTitle,articleTags:articleTags,articleCategories:articleCategories,publishDate:publishDate,updateDate:updateDate,articleUrl:articleUrl,articleTabloid:articleTabloid,lastArticleId:lastArticleId,nextArticleId:nextArticleId},
+                success:function () {
+                    alert("小主，发布成功");
+                },
+                error:function () {
+                    alert("呜呜，发布失败");
+                }
+            })
+        }
+
+    });
+   
+</script>
+
+</body>
+</html>

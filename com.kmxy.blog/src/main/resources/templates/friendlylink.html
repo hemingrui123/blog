@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>程序猿何先森 | 友链</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="博客,个人,学习">
+    <meta name="description" content="">
+
+    <link rel="icon" type="image/x-icon" href="https://hmr-myblog.oss-cn-beijing.aliyuncs.com/public/header.jpg">
+    <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/friendlylink.css">
+    <link href="https://lib.baomitu.com/font-awesome/5.8.0/css/fontawesome.min.css" rel="stylesheet">
+
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://lib.baomitu.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--引入共有头部-->
+    <div th:replace="header :: header"></div>
+    <!--页面主体-->
+    <div id="main">
+        <div class="am-container">
+            <div class="am-g">
+                <div class="am-u-sm-12 am-u-lg-12">
+                    <div class="site-inner">
+                        <div class="zhy-friendlylink-title am-animation-slide-top">
+                            <i class="am-icon-hashtag "></i><span>大佬博客</span>
+                        </div>
+                        <div class="friendLinks zhy-friendlylink-author am-animation-shake">
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://blog.didispace.com" target="_blank">程序猿DD</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://www.ityouknow.com" target="_blank">纯洁的微笑</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://www.spring4all.com" target="_blank">spring4all</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="https://www.liaoxuefeng.com" target="_blank">廖雪峰的官方网站</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://cxytiandi.com" target="_blank">猿天地</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="https://www.bysocket.com" target="_blank">泥瓦匠BYSocket</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://www.tianshouzhi.com" target="_blank">田守枝Java技术博客</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://blog.itmyhome.com" target="_blank">麦田技术博客</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://blog.720ui.com" target="_blank">梁桂钊</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://www.icnws.com" target="_blank">城南往事</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="https://blog.52itstyle.com" target="_blank">小柒博客</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://cmsblogs.com" target="_blank">chenssy</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="https://crossoverjie.top" target="_blank">crossoverJie</a>
+                            </div>
+                            <div class="friendLink">
+                                <i class="am-icon-street-view "></i>
+                                <a href="http://techblog.pub" target="_blank">原创博客技术联盟</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="site-middle am-animation-slide-top">
+                        <div class="zhy-friendlylink-title">
+                            <i class="am-icon-hashtag "></i><span>友情链接</span>
+                        </div>
+                        <div id="friendLinks" class="friendLinks zhy-friendlylink-author">
+                            <!--填充友链信息-->
+                        </div>
+                    </div>
+                    <div class="zhy-link-word am-animation-slide-top">
+                        <div class="zhy-friendlylink-title">
+                            <i class="am-icon-hashtag "></i><span>链接公告</span>
+                        </div>
+                       
+                    </div>
+                    <div class="zhy-link-word am-animation-slide-top">
+                        <div class="zhy-friendlylink-title">
+                            <i class="am-icon-hashtag "></i><span>友链须知</span>
+                        </div>
+                        
+                    </div>
+                    <div class="zhy-link-word">
+                        <div class="comment" style="margin: 0 auto 50px">
+                            <div class="comment-top">
+                                <div class="comment-top-input" th:if="${#httpServletRequest.remoteUser}">
+                                    <textarea id="comment" placeholder="客官，来说两句吧..."></textarea>
+                                </div>
+                                <div class="comment-top-input" th:unless="${#httpServletRequest.remoteUser}">
+                                    <div class="goToLogin">
+                                        &nbsp;&nbsp;&nbsp;<a id="toLogin">登录</a>后才可以发表留言呦...
+                                    </div>
+                                </div>
+                                <div class="commentBtn">
+                                    <button id="commentBtn" type="button" class="am-btn am-btn-secondary">发表留言</button>
+                                </div>
+                            </div>
+                            <div class="comment-bottom">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--消息盒子+反馈-->
+    <div th:replace="other :: other"></div>
+</div>
+
+<script src="js/all.js"></script>
+<script src="js/friendlylink.js"></script>
+<script src="js/leaveMessage.js"></script>
+</body>
+</html>

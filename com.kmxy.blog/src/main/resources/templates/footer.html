@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+    <!--所有页面共有底部-->
+    <div th:fragment="footer">
+        <div class="footer">
+            <div class="footer am-u-sm-centered">
+                <div class="am-vertical-align" style="text-align: center">
+                    <hr>
+                    <div class="am-vertical-align-bottom">
+                        
+                        
+                        <div class="webLogo" style="font-size: 15px;">
+                            <a href="/" target="_blank">
+                                                       其他网站学习平台
+                            </a>
+                        </div>
+                       
+                         <div class="icons-row">
+                            <div class="icons">
+                                <div class="icon">
+                                    <a href="https://github.com" target="_blank" class="am-icon-github am-icon-md " title="GitHub" data-am-popover="{content: 'GitHub', trigger: 'hover focus'}"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="https://gitee.com" class="am-icon-gg am-icon-md" target="_blank" title="码云" data-am-popover="{content: '码云', trigger: 'hover focus'}"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="http://www.imooc.com" target="_blank" ><img src="/img/mooc.jpg" style="width: 30px" data-am-popover="{content: '慕课网', trigger: 'hover focus'}"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="https://www.csdn.net" target="_blank" title="CSDN"><img src="/img/csdn.jpg" data-am-popover="{content: 'CSDN', trigger: 'hover focus'}"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="https://www.w3cschool.cn" target="_blank" title=""><img src="/img/w3c.jpg" style="width: 30px" data-am-popover="{content: 'w3cschool', trigger: 'hover focus'}"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar_toggle" class="sidebar_toggle" data-am-offcanvas="{target: '#offCanvas'}">
+                <div class="sidebar_toggle_line_wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first" style="width: 100%; top: 0; transform: rotateZ(0deg); opacity: 1; left:0"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle" style="width: 100%; opacity: 1; left: 0; top: 0; transform: rotateZ(0deg);"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last" style="width: 100%; top: 0; transform: rotateZ(0deg); opacity: 1; left: 0;"></span>
+                </div>
+            </div>
+            <div id="offCanvas" class="am-offcanvas">
+                <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+                    <div class="am-offcanvas-content">
+                        <div class="sidebar-inner">
+                            <div class="site-overview">
+                                <div class="img-author" style="text-align: center">
+                                    
+                                    <div class="author-name">
+                                      何明锐
+                                    </div>
+                                    <div class="author-words">
+                                        <p>若有不足之处欢迎指正</p>
+                                        
+                                    </div>
+
+                                </div>
+                                <div class="site-state" style="opacity: 1; display: block; transform: translateX(0px);">
+                                    <div class="site-state-item learn-posts">
+                                        <a href="/archives">
+                                            <span class="archivesNum site-state-item-count"></span>
+                                            <span class="site-state-item-name">日志</span>
+                                        </a>
+                                    </div>
+                                    <div class="site-state-item learn-categories">
+                                        <a id="site-state-item-a" href="/categories">
+                                            <span class="categoriesNum site-state-item-count"></span>
+                                            <span class="site-state-item-name">分类</span>
+                                        </a>
+                                    </div>
+                                    <div class="site-state-item learn-tags">
+                                        <a href="/tags">
+                                            <span class="tagsNum site-state-item-count"></span>
+                                            <span class="site-state-item-name">标签</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-way">
+                                    <span><i class="am-icon-qq">&nbsp;&nbsp;3103285129</i></span>
+                                    <span><i class="am-icon-wechat">&nbsp;&nbsp;hemingrui123</i></span>
+                                </div>
+                                
+                                </div>
+                                <div class="author-words">
+                                    <p>本人目前昆明学院本科生在读</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
+                <a id="toTop"  href="#top">
+                <span title="到顶部" style="color: white">
+                    <i class="am-icon-arrow-up"></i>
+                </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</html>

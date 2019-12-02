@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>程序猿何先森 | 关于我</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="you should blong to me">
+    <meta name="description" content="you should blong to me">
+
+    <link rel="icon" type="image/x-icon" href="https://hmr-myblog.oss-cn-beijing.aliyuncs.com/public/header.jpg">
+    <link rel="stylesheet" type="text/css" href="css/aboutmetimeline.css">
+    <link href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/aboutme.css">
+    <link href="https://lib.baomitu.com/font-awesome/5.8.0/css/fontawesome.min.css" rel="stylesheet">
+
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://lib.baomitu.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--引入共有头部-->
+    <div th:replace="header :: header"></div>
+    <!--页面主体-->
+    
+    <div id="main">
+    <div class="row bg" >
+        <div class="am-container">
+            <div class="am-g">
+                <div class="am-u-sm-12 am-u-lg-12">
+                    <div id="wordsView">
+                        <div class="title">
+                            <div class="title-words">
+                                <h1 class="title-words-h1">关于我</h1>
+                            </div>
+
+                            <div class="title-img">
+                                <p>
+                                    <img src="https://hmr-myblog.oss-cn-beijing.aliyuncs.com/public/lazy.gif" data-src="https://hmr-myblog.oss-cn-beijing.aliyuncs.com/public/header.jpg" class="enlargePicture am-img-thumbnail am-radius">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="zhy-my-words"  data-am-scrollspy="{animation: 'scale-down'}">
+                            <p><i class="am-icon-quote-left " style="float: left"></i></p><br>
+                            <div class="zhy-info">
+                                <p class="zhy-info-words">
+                                    何明锐，目前就读于昆明学院，有点闷骚，其他还好<br>
+                                    <br>
+                                    正宗97后，梦想着和那个傻姑娘养一只猫一只狗，有着一间属于我们自己的爱情小屋。<br>
+                                    <br>
+                                    梁思成曾经问过林徽因这么一句话：“有一句话，我只问一次，以后都不会再问了，为什么是我？”
+                                    她回答道“答案很长，我得用一生去告诉你，准备好听我说了吗？”<br><br>
+                                    不管未来会面对什么，我们都有一起面对呦(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤
+                                </p>
+                            </div>
+                            <p><i class="am-icon-quote-right " style="float: right"></i></p><br><hr>
+                        </div>
+                        <!-- <div class="zhy-hobby">
+                            <blockquote style="padding: 10px 18px">
+                                兴趣爱好
+                                <ul>
+                                    <li>擅长蛙泳，号称蛙泳小王子</li>
+                                    <li>喜欢旅游：喜欢风景和文艺之地，也争取未来远离"颈椎"的困扰；</li>
+                                    <li>喜欢音乐：理想三旬；</li>
+                                    <li>喜欢电影：鬼片；</li>
+                                    <li>喜欢看书：金瓶梅；</li>
+                                    <li>想要一起逗猫喂狗顺便撒撒狗粮，开心每一天；</li>
+                                </ul>
+                            </blockquote>
+                            <span style="font-size: 14px;color: #555;">我就是这样的我，不一样的烟火，</span>
+                        </div> -->
+                       <!--  <div class="zhy-title-QRCode" style="margin-top: 20px">
+                            <p><i class="am-icon-quote-left " style="float: left"></i></p><br>
+                            <div class="zhy-title-QRCode-word">
+                                <strong>(ˇ?ˇ) 想～一起交流吗，来加微信吧</strong><br>
+                                <img class="enlargePicture" src="#" data-src="/img/weixin.jpg" width="100px" height:"100px"><br>
+                               
+                            </div>
+                            <p><i class="am-icon-quote-right " style="float: right"></i></p>
+                        </div> -->
+                        <br><br><hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
+
+                        <div style="text-align: right;margin: 30px auto">
+                            <i class="am-icon-paper-plane am-icon-spin"></i>
+                            <i class="am-icon-paper-plane-o am-icon-spin" style="margin-left: 60px"></i><br>
+                        </div>
+                        <div class="zhy-original">
+                            <div class="zhy-original-title">
+                                <h1 class="zhy-original-title-h1">初衷</h1>
+                                <p class="zhy-erha">
+                                    <img src="#" data-src="/img/chuzhong.jpg" class="enlargePicture am-img-thumbnail">
+                                </p><br><br>
+                                <p><i class="am-icon-quote-left " style="float: left"></i></p><br>
+                                <div class="zhy-original-words">
+                                    <p>昨天很苦，今天也很苦，也许明天就好点了</p><br>
+                                    <p>
+                                    <!-- <div class="zhy-quot">
+                                        <blockquote class="zhy-quot-font" style="background-color: #fafafa;">
+                                            <strong>标题：写博客对程序员很重要吗？</strong>
+                                            <p style="margin-top: 7px">之前开了公众号装逼写技术博客，更新了一段时间没人看就不写技术写一些情感、生活、旅游、吃喝玩乐的内容，
+                                                反正只要能写的就都写。</p><br>
+                                            <p>
+                                                后来相亲认识了一妹子，没多久就好上了，主要是那妹纸太主动了，我没守住底线，沦陷了</p><br>
+                                            <p>
+                                                问妹纸为什么主动追我，妹纸说:你的每篇文章我都看了，字里行间感受到了正能量，应该不是那种靠不住的男人，我年纪
+                                                也不小了，机会不容错过，于是就使了点套路。"</p><br>
+                                            <p>我之前一直单身，始终找不好女朋友，对我有意思的我不喜欢，我喜欢的对我没感觉。现在能找到个令我满意的女朋友还没费多少
+                                                事我想应该有写博客一部分功劳吧。所以我觉得写博客对程序员来说挺重要的。</p><br>
+                                        </blockquote>
+                                        <p>好吧，重点不在于怎么找女朋友。作为一名开发人员，写博客是很好的一种体现，优秀的人总是乐忠于分享，这也是我决定搭建起这个博客站点的原因吧。相信多年以后，你会感谢曾经的自己所付出的努力，最终你也会成为那个优秀的人。</p><br><br>
+                                        <p style="text-align: center"><b><i>学习的不仅是技术，更是梦想！<br>再牛B的技术，也经不住你傻B式的坚持！</i></b></p>
+                                    </div> -->
+                                </div>
+                                <p><i class="am-icon-quote-right " style="float: right"></i></p><br>
+                            </div>
+                        </div>
+                        <hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
+                        <div class="zhy-opinion">
+                            <div class="zhy-opinion-title">
+                                <h1 style="font-size: 30px;font-weight: 400">意见反馈</h1>
+                            </div>
+                            <div class="zhy-erha">
+                                <img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/loading.gif" data-src="/img/refuse.jpg" class="enlargePicture am-img-thumbnail">
+                            </div>
+                            <div class="zhy-opinion-words">
+                                <p><strong><u><i>若本博客有做的不好的地方，请留言私信我们进行整改，么么哒</i></u></strong></p>
+                            </div>
+                        </div>
+                        <br><br><hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
+                        <div class="zhy-life">
+                            <div style="text-align: right;margin: 30px auto">
+                                <i class="am-icon-arrows am-icon-spin"></i>
+                                <i class="am-icon-arrows am-icon-spin" style="margin-left: 60px"></i><br>
+                            </div>
+                            <div class="zhy-life-title">
+                                <span>心情</span>
+                            </div>
+                            <div class="zhy-you">
+                                <img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/loading.gif" data-src="/img/happy.jpg" class="enlargePicture am-img-thumbnail">
+                            </div>
+                            <p></p>
+                            <div class="content">
+                                <article>
+                                    <!--年份使用淡出动画，内容使用左侧滑入效果-->
+                                    <h3  data-am-scrollspy="{animation: 'scale-up'}">2019</h3>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-purple"></span>
+                                        <time datetime="2019-07">
+                                            <span>2019/07/27</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">不知道该说什么</p>
+                                            <p class="brief"><span class="text-yello">
+                                                斯人如彩虹，遇见方知有。很多事情，真的是身不由己。
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-purple"></span>
+                                        <time datetime="2019-03">
+                                            <span>2019/03/22</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">恐怖恐怖恐怖</p>
+                                            <p class="brief"><span class="text-blue">
+                                              昆明学院的食堂鸡腿里有虫子！
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-yellow"></span>
+                                        <time datetime="2019-06">
+                                            <span>2019/06/14</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">莫非就要开启北漂生活了吗</p>
+                                            <p class="brief"><span class="text-red">
+                                            北京，天安门.毛主席。长城，北京的妹纸，向往
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <h3  data-am-scrollspy="{animation: 'scale-up'}">2018</h3>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-red"></span>
+                                        <time datetime="2019-2">
+                                            <span>2019/2/16</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">8102也快要结束了,单身不筷落</p>
+                                            <p class="brief"><span class="text-blue">
+                                                有人说：林深时见鹿，海蓝时见鲸，梦醒时见你<br>
+                                                可实际：林深时雾起，海蓝时浪涌，梦醒时夜续<br>
+                                                &nbsp;&nbsp;&nbsp;不见鹿，不见鲸，亦不见你
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-yellow"></span>
+                                        <time datetime="2018-11">
+                                            <span>2019/1/04</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">生活给了你一块糖，也给了你一个巴掌</p>
+                                            <p class="brief"><span class="text-red">
+                                                俗话说的好：没认真投入过的感情，自然很快就能释怀。
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-purple"></span>
+                                        <time datetime="2018-10">
+                                            <span>2019/10/10</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">喜欢一个人真的好难</p>
+                                            <p class="brief"><span class="text-blue">
+                                                喜欢你，就算心里放弃了一千次，也会在你说一句好听的话后，再奋不顾身一万次。
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-red"></span>
+                                        <time datetime="2018-09">
+                                            <span>2018/09/13</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">曾经看过一句暖到心里的话</p>
+                                            <p class="brief"><span class="text-blue">
+                                                哎
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-yellow"></span>
+                                        <time datetime="2018-09">
+                                            <span>2018/09/02</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">终究成为了大三的老男人</p>
+                                            <p class="brief"><span class="text-green">
+                                                新学期开始了，注定了又是繁忙的一学期
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-red"></span>
+                                        <time datetime="2018-07">
+                                            <span>2018/07/25</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">暑期真快乐</p>
+                                            <p class="brief"><span class="text-red">快乐很简单，你给我一个西瓜，就凉爽了一个夏天</span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-red"></span>
+                                        <time datetime="2018-07">
+                                            <span>2018/07/05</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">压力大</p>
+                                            <p class="brief"><span class="text-red">马上要工作，实习了。</span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-yellow"></span>
+                                        <time datetime="2018-06">
+                                            <span>2018/06/07</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">有一种青春叫高考</p>
+                                            <p class="brief"><span class="text-blue">哇，一转眼离自己高考就过去两年了，仿佛还在昨日一般。也只有当了大学生后
+                                            才会体会到高中的幸福吧，真的很想念高中的那伙人，不知道下次相见会是何日。</span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-purple"></span>
+                                        <time datetime="2018-06">
+                                            <span>2018/06/01</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">祝所有"小朋友"六一快乐</p>
+                                            <p class="brief"><span class="text-green">也祝我自己六一快乐，哈哈哈</span></p>
+                                        </aside>
+                                    </section>
+                                    <section  data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-red"></span>
+                                        <time datetime="2018-05">
+                                            <span>2018/05/25</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">开心</p>
+                                            <p class="brief"><span class="text-blue"> 她看了我一眼
+                                            </span></p>
+                                        </aside>
+                                    </section>
+                                    <section data-am-scrollspy="{animation: 'slide-left'}">
+                                        <span class="point-time point-yellow"></span>
+                                        <time datetime="2018-05">
+                                            <span>2018/05/17</span>
+                                        </time>
+                                        <aside>
+                                            <p class="things">开始征程</p>
+                                            <p class="brief"><span class="text-red">书山有路勤为径，学海无涯苦作舟</span></p>
+                                        </aside>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-top">
+                            <div class="comment-top-input" th:if="${#httpServletRequest.remoteUser}">
+                                <textarea id="comment" placeholder="客官，来说两句吧..."></textarea>
+                            </div>
+                            <div class="comment-top-input" th:unless="${#httpServletRequest.remoteUser}">
+                                <div class="goToLogin">
+                                    &nbsp;&nbsp;&nbsp;<a id="toLogin">登录</a>后才可以发表留言呦...
+                                </div>
+                            </div>
+                            <div class="commentBtn">
+                                <button id="commentBtn" type="button" class="am-btn am-btn-secondary">发表留言</button>
+                            </div>
+                        </div>
+                        <!--页面留言-->
+                        <div class="comment-bottom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--消息盒子+反馈-->
+    <div th:replace="other :: other"></div>
+</div>
+
+<script src="js/all.js"></script>
+<script src="js/leaveMessage.js"></script>
+<!--放大图片插件-->
+<script src="js/lightgallery/lightgallery.js"></script>
+<script src="js/lightgallery/picturefill.min.js"></script>
+<script src="js/lightgallery/lg-pager.js"></script>
+<script src="js/lightgallery/lg-autoplay.js"></script>
+<script src="js/lightgallery/lg-fullscreen.js"></script>
+<script src="js/lightgallery/lg-zoom.js"></script>
+<script>
+    lightGallery(document.getElementById('wordsView'));
+</script>
+</body>
+</html>
